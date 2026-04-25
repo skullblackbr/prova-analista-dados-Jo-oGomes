@@ -45,18 +45,18 @@ python queries.py
 
 | Metrica | Valor |
 |---------|-------|
-| Total Registros | [n] |
-| Soma Total | R$ [valor] |
-| Media | R$ [valor] |
+| Total Registros | 100 |
+| Soma Total | R$ 133.630,00 |
+| Media | R$ 1.340,00 |
 
 ## Dashboard Power BI
 
-[Screenshot aqui]
+[Clique abaixo para acessar o print do dashboard]
 
-[Acessar online](link)
+[Acessar online]([link](https://prnt.sc/sHG9YKJn0FH8))
 
 ## Autor
 
-[Nome do Candidato]
+João Guilherme Ferreira Gomes dos Santos
 
-[Data]
+24/04/2026
