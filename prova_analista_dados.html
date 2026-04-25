@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Pratica - Analista de Dados</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
+        h1 { text-align: center; color: #1a73e8; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 20px; }
+        h2 { color: #1a73e8; margin: 30px 0 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+        .task { background: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 4px solid #1a73e8; }
+        .task h3 { color: #333; margin-bottom: 15px; font-size: 18px; }
+        .task ol, .task ul { margin-left: 20px; line-height: 1.8; }
+        .task li { margin-bottom: 8px; }
+        .code-block { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; font-family: Consolas, monospace; margin: 10px 0; overflow-x: auto; }
+        .highlight { background: #fff3cd; padding: 2px 6px; border-radius: 4px; }
+        .warning { background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 6px; margin: 20px 0; }
+        .success { background: #d4edda; border: 1px solid #28a745; padding: 15px; border-radius: 6px; margin: 20px 0; }
+        .deliverable { background: #fce4ec; border: 1px solid #e91e63; padding: 15px; border-radius: 6px; margin: 10px 0; }
+        .deliverable h4 { color: #c2185b; }
+        .step-number { display: inline-block; width: 30px; height: 30px; background: #1a73e8; color: white; border-radius: 50%; text-align: center; line-height: 30px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prova Pratica - Analista de Dados</h1>
+        <p class="subtitle">Vaga: Analista de Dados | ETL + Power BI + Data Mining</p>
+        
+        <div class="warning">
+            <strong>IMPORTANTE:</strong> Leia todas as etapas. Execute TODAS as etapas e entregue os artefatos listados. Tempo estimado: 2-3 horas.
+        </div>
+
+        <h2>Entregaveis Obrigatorios</h2>
+        <div class="deliverable">
+            <h4>Entregar no GitHub:</h4>
+            <ul>
+                <li>1. Repositorio GitHubpublico com todo o codigo</li>
+                <li>2. Script ETL funcional (Python)</li>
+                <li>3. Banco de dados com dados processados</li>
+                <li>4. Resultados das queries analiticas</li>
+                <li>5. Arquivo .pbix do Power BI</li>
+                <li>6. Screenshot do dashboard</li>
+                <li>7. README.md completo</li>
+            </ul>
+        </div>
+
+        <h2>Passo a Passo</h2>
+
+        <div class="task">
+            <h3><span class="step-number">1</span> Preparar Ambiente</h3>
+            <ol>
+                <li>Criar pasta de trabalho (ex: C:\Users\SEU_NOME\prova-dados)</li>
+                <li>Instalar Python 3.8+: <a href="https://www.python.org/downloads/" target="_blank">python.org</a></li>
+                <li>Instalar Power BI Desktop: <a href="https://powerbi.microsoft.com/pt-br/desktop/" target="_blank">powerbi.microsoft.com</a></li>
+                <li>Criar conta no GitHub: <a href="https://github.com/" target="_blank">github.com</a></li>
+            </ol>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">2</span> Criar Repositorio GitHub</h3>
+            <ol>
+                <li>Acessar github.com e fazer login</li>
+                <li>Clicar em "New repository"</li>
+                <li>Nome: <span class="highlight">prova-analista-dados-SEUSOBRENOME</span></li>
+                <li>Selecionar "Public"</li>
+                <li>Marcar "Add a README file"</li>
+                <li>Clicar em "Create repository"</li>
+            </ol>
+            <div class="success"><strong>PRONTO:</strong> Anote o link!</div>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">3</span> Clonar e Configurar</h3>
+            <ol>
+                <li>Abrir terminal/cmd</li>
+                <li>Navegar para pasta:</li>
+            </ol>
+            <div class="code-block">cd C:\Users\SEU_NOME\prova-dados</div>
+            <ol start="3">
+                <li>Clonar repositorio:</li>
+            </ol>
+            <div class="code-block">git clone https://github.com/seuusuario/prova-analista-dados-seunome.git</div>
+            <ol start="4">
+                <li>Copiar scripts: etl.py, conexao.py, queries.py, requirements.txt</li>
+            </ol>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">4</span> Baixar Dataset</h3>
+            <ol>
+                <li>Escolher dataset de:</li>
+                <ul>
+                    <li><a href="https://www.kaggle.com/datasets" target="_blank">Kaggle</a></li>
+                    <li><a href="https://archive.ics.uci.edu/" target="_blank">UCI Machine Learning</a></li>
+                </ul>
+                <li>Ou usar comando:</li>
+            </ol>
+            <div class="code-block">python -c "import pandas as pd; df = pd.read_csv('https://raw.githubusercontent.com/datasets/advertising/master/data/advertising.csv'); df.to_csv('dados_originais.csv', index=False)"</div>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">5</span> Executar ETL</h3>
+            <ol>
+                <li>Instalar dependencias:</li>
+            </ol>
+            <div class="code-block">pip install -r requirements.txt</div>
+            <ol start="2">
+                <li>Executar ETL:</li>
+            </ol>
+            <div class="code-block">python etl.py dados_originais.csv dados.db</div>
+            <ol start="3">
+                <li>Verificar se criou dados.db</li>
+            </ol>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">6</span> Executar Queries</h3>
+            <ol>
+                <li>Executar:</li>
+            </ol>
+            <div class="code-block">python queries.py</div>
+            <ol start="2">
+                <li>Verificar resultados.txt criado</li>
+            </ol>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">7</span> Criar Dashboard Power BI</h3>
+            <ol>
+                <li>Abrir Power BI Desktop</li>
+                <li>Obter Dados > SQLite > dados.db</li>
+                <li>Selecionar tabela: vendas</li>
+                <li>Clicar Carregar</li>
+            </ol>
+            <div class="warning">
+                <strong>Criar visualizacoes:</strong>
+                <ul>
+                    <li>1 Card (KPIs)</li>
+                    <li>1 Grafico de Barras</li>
+                    <li>1 Grafico de Pizza/Rosca</li>
+                    <li>1 Grafico de Linha</li>
+                    <li>1 Tabela</li>
+                    <li>1 Filtro (Slicer)</li>
+                </ul>
+            </div>
+            <ol start="6">
+                <li>Salvar: dashboard.pbix</li>
+                <li>Exportar imagem: dashboard.png</li>
+            </ol>
+        </div>
+
+        <div class="task">
+            <h3><span class="step-number">8</span> Entregar no GitHub</h3>
+            <ol>
+                <li>Adicionar arquivos:</li>
+            </ol>
+            <div class="code-block">git add .
+git commit -m "Prova concluida"
+git push</div>
+            <ol start="2">
+                <li>Atualizar README.md com descricao, link, resultados, screenshot</li>
+            </ol>
+            <ol start="4">
+                <li>Push do README:</li>
+            </ol>
+            <div class="code-block">git add README.md
+git commit -m "Documentacao final"
+git push</div>
+            <div class="success"><strong>PROVA ENTREGUE!</strong></div>
+        </div>
+
+        <h2>Checklist</h2>
+        <div class="task">
+            <ul>
+                <li>[ ] Repositorio GitHubpublico</li>
+                <li>[ ] dados_originais.csv</li>
+                <li>[ ] dados.db</li>
+                <li>[ ] resultados.txt</li>
+                <li>[ ] dashboard.pbix</li>
+                <li>[ ] dashboard.png</li>
+                <li>[ ] README.md</li>
+            </ul>
+        </div>
+
+        <h2>Criterios de Avaliacao</h2>
+        <div class="task">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr style="background:#1a73e8; color:white;">
+                    <th style="padding:10px; text-align:left;">Item</th>
+                    <th style="padding:10px;">Peso</th>
+                </tr>
+                <tr style="background:#f8f9fa;"><td style="padding:10px;">Estrutura Git</td><td style="padding:10px;">10%</td></tr>
+                <tr style="background:#fff;"><td style="padding:10px;">Codigo ETL</td><td style="padding:10px;">25%</td></tr>
+                <tr style="background:#f8f9fa;"><td style="padding:10px;">Tratamento dados</td><td style="padding:10px;">15%</td></tr>
+                <tr style="background:#fff;"><td style="padding:10px;">Queries</td><td style="padding:10px;">15%</td></tr>
+                <tr style="background:#f8f9fa;"><td style="padding:10px;">Dashboard Power BI</td><td style="padding:10px;">25%</td></tr>
+                <tr style="background:#fff;"><td style="padding:10px;">Documentacao</td><td style="padding:10px;">10%</td></tr>
+            </table>
+            <div class="warning" style="margin-top:15px;">Nota minima: 70 pontos</div>
+        </div>
+    </div>
+</body>
+</html>

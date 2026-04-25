@@ -1,0 +1,111 @@
+========================================
+PROVA PRATICA - ANALISTA DE DADOS
+ETL + Power BI + Data Mining
+========================================
+
+TEMPO: 2-3 horas
+NOTA MINIMA: 70 pontos
+
+========================================
+ENTREGAVEIS OBRIGATORIOS
+========================================
+
+No GitHub, entregar:
+1. Repositorio GitHubpublico
+2. Script ETL (Python)
+3. Banco de dados processado
+4. Resultados das queries
+5. Arquivo .pbix do Power BI
+6. Screenshot do dashboard
+7. README.md completo
+
+========================================
+PASSO A PASSO
+========================================
+
+PASSO 1: PREPARAR AMBIENTE (10 min)
+- Criar pasta de trabalho
+- Instalar Python 3.8+: python.org
+- Instalar Power BI Desktop
+- Criar conta no GitHub
+
+PASSO 2: CRIAR REPOSITORIO (10 min)
+- Acessar github.com > New repository
+- Nome: prova-analista-dados-SEUSOBRENOME
+- Public + Add README
+- Criar repository
+
+PASSO 3: CONFIGURAR (10 min)
+- Abrir cmd/terminal
+- cd pasta-de-trabalho
+- git clone [link-do-repositorio]
+- Copiar arquivos: etl.py, conexao.py, queries.py, requirements.txt
+
+PASSO 4: BAIXAR DATASET (15 min)
+Escolher de:
+- kaggle.com/datasets
+- archive.ics.uci.edu/
+
+Ou usar comando:
+python -c "import pandas as pd; df = pd.read_csv('https://raw.githubusercontent.com/datasets/advertising/master/data/advertising.csv'); df.to_csv('dados_originais.csv', index=False)"
+
+PASSO 5: EXECUTAR ETL (30 min)
+pip install -r requirements.txt
+python etl.py dados_originais.csv dados.db
+
+PASSO 6: EXECUTAR QUERIES (15 min)
+python queries.py
+Verificar resultados.txt
+
+PASSO 7: DASHBOARD POWER BI (45 min)
+1. Abrir Power BI Desktop
+2. Obter Dados > SQLite > dados.db
+3. Selecionar tabela "vendas"
+4. Criar visualizacoes:
+   - 1 Card (KPIs)
+   - 1 Grafico Barras
+   - 1 Grafico Pizza
+   - 1 Grafico Linha
+   - 1 Tabela
+   - 1 Filtro (Slicer)
+5. Salvar: dashboard.pbix
+6. Exportar: dashboard.png
+
+PASSO 8: ENTREGAR (15 min)
+git add .
+git commit -m "Prova concluida"
+git push
+
+Atualizar README.md com descricao e screenshot
+git add README.md
+git commit -m "Documentacao final"
+git push
+
+========================================
+CHECKLIST
+========================================
+
+[ ] Repositorio GitHubpublico
+[ ] dados_originais.csv
+[ ] dados.db
+[ ] resultados.txt
+[ ] dashboard.pbix
+[ ] dashboard.png
+[ ] README.md
+
+========================================
+CRITERIOS DE AVALIACAO
+========================================
+
+Item                    Peso
+----------------------------
+Estrutura Git           10%
+Codigo ETL             25%
+Tratamento dados       15%
+Queries analiticas     15%
+Dashboard Power BI     25%
+Documentacao          10%
+
+========================================
+DONE!
+========================================
